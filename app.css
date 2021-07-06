@@ -11,7 +11,10 @@
     color:#333;
 }
 
-h1,h2,h3,h4{
+h1,
+h2,
+h3,
+h4{
     margin-bottom: 1rem;
 }
 
@@ -47,6 +50,7 @@ h3{
     align-items: center;
     max-width: 80rem;
     margin: 0 auto;
+    padding: 2rem;
 }
 
 /* css for anychild of my container */
@@ -102,4 +106,9 @@ h3{
     box-shadow: none;
     transform: none;
 }
+
+
+
+
+
 

@@ -38,8 +38,6 @@ fetch(
             });
             return formattedQuestion;
         });
-        game.classList.remove("hidden");
-        loader.classList.add("hidden");
         startGame();
     })
     .catch((err) => {
@@ -55,6 +53,8 @@ startGame = () => {
     score = 0;
     availableQuesions = [...questions];
     getNewQuestion();
+    game.classList.remove("hidden");
+    loader.classList.add("hidden");
 };
 
 getNewQuestion = () => {

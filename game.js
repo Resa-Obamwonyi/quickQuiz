@@ -2,6 +2,8 @@ const question = document.getElementById('question');
 const choices = Array.from(document.getElementsByClassName('choice-text'));
 const progressText = document.getElementById('progressText');
 const scoreText = document.getElementById('score');
+const loader = document.getElementById('loader');
+const game = document.getElementById('game');
 const progressBarFull = document.getElementById('progressBarFull');
 let currentQuestion = {};
 let acceptingAnswers = false;
@@ -34,9 +36,10 @@ fetch(
             answerChoices.forEach((choice, index) => {
                 formattedQuestion['choice' + (index + 1)] = choice;
             });
-
             return formattedQuestion;
         });
+        game.classList.remove("hidden");
+        loader.classList.add("hidden");
         startGame();
     })
     .catch((err) => {
